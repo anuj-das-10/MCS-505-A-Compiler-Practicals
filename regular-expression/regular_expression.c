@@ -31,16 +31,14 @@ void main() {
 		exit(0);
 	}
 	
-	if(length > 1 && a >= 0 && b >= 1) {
-		if(str[0] == 'a' && str[length-1] == 'b') {
+	if(length >= 1 && a >= 0 && b >= 1 && (str[0] == 'a' || str[0] == 'b') && str[length-1] == 'b') {
 			for(i = 1; i < length-1; i++) {
 				if(str[i] == 'b' && str[i+1] == 'a') {
 					error++;
-				}
-			}
-		} else {
-			error++;
-		}	
+				}	
+			} 
+	} else {
+		error++;	
 	} 	
 		
 	if(error > 0) 
